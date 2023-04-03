@@ -26,6 +26,7 @@ jobs:
           tag: latest,$CIRCLE_SHA1
 
 workflows:
+  sample:
     jobs:
       - build-and-test
   build-and-push-to-ecr:
