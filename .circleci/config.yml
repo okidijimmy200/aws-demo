@@ -22,6 +22,7 @@ jobs:
       - setup_remote_docker:
           version: 20.10.11
       - aws-ecr/build-and-push-image:
+          public-registry: true
           dockerfile: Dockerfile
           repo: aws
           tag: latest,$CIRCLE_SHA1
@@ -35,7 +36,6 @@ workflows:
       - aws-ecr:
           context:
             - AWS-ECR-DEMO
-          public-registry: true
           filters:
             branches:
               only:
