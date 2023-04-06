@@ -4,7 +4,7 @@ from httpx import AsyncClient
 from main import app
 
 
-# test root
+# test root access here
 @pytest.mark.anyio
 async def test_root():
     async with AsyncClient(app=app, base_url="http://test") as ac:
