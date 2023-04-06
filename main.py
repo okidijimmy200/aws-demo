@@ -3,7 +3,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-
+'''get route'''
 @app.get("/")
 async def root():
     return {"message": "Tomato"}
