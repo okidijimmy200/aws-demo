@@ -48,4 +48,6 @@ workflows:
           family: 'ecs-service-3'
           cluster: 'aws-cluster-3'
           container-image-name-updates: 'container=ecs-service-3,tag=${CIRCLE_SHA1}'
+          context:
+            - AWS-ECR-DEMO
       
