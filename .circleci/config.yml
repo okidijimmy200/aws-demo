@@ -18,11 +18,7 @@ jobs:
           command: pytest
       - setup_remote_docker:
           version: 20.10.11
-      - aws-ecr/build-and-push-image:
-          public-registry: true
-          dockerfile: Dockerfile
-          repo: aws
-          tag: latest,$CIRCLE_SHA1
+
 
 workflows:
 # indivudual work lines
@@ -38,6 +34,13 @@ workflows:
               only:
                 # we can use wild card that makes it run on feature branches or master branch /server\/.*/ use reg exp
                 - master
+      - aws-ecr/build-and-push-image:
+          public-registry: true
+          dockerfile: Dockerfile
+          repo: aws
+          tag: latest,$CIRCLE_SHA1
+          context:
+            - AWS-ECR-DEMO
 
       - aws-ecs/deploy-service-update: # orb built-in job
           requires:
