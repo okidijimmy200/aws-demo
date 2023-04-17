@@ -45,7 +45,7 @@ workflows:
       - aws-ecs/deploy-service-update: # orb built-in job
           requires:
             - aws-ecr/build-and-push-image
-          family: 'ecs-service-3'
+          family: 'ecr-task-def'
           cluster: 'aws-cluster-3'
           container-image-name-updates: 'container=ecs-service-3,tag=${CIRCLE_SHA1}'
           context:
