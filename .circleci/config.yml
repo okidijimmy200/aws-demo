@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - python/install-packages:
-          pkg-manager: pip3
+          pkg-manager: pip
       - run:
           name: Run tests
           command: pytest

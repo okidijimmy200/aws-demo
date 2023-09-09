@@ -5,7 +5,7 @@ COPY . .
 
 
 COPY requirements.txt .
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 # expose file(8000) to expose image to outside world (expose 80 and 663)
 EXPOSE 8000
 
