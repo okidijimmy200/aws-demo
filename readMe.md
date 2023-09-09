@@ -3,7 +3,7 @@ Deploying simple Application to AWS EC Fargate
 >EC2 instance - make use of docker to build images, more like an aws server
 >ECR - used to store images
 
-1. 
+1. in
 launch EC2 instance 2
  create key pair
  edit network settings(create a security group)
