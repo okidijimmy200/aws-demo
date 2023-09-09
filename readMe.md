@@ -18,7 +18,7 @@ install docker
  >systemctl start docker
 build docker image
 
-2.
+2.v
 creating ecr
 login to ecr
 tag existing image as AWS ECR repo
