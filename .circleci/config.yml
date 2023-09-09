@@ -8,16 +8,16 @@ orbs:
 jobs:
   aws-ecr:
     docker:
-      - image: cimg/python:3.11.5
+      - image: cimg/python:3.11.0
     steps:
       - checkout
       - python/install-packages:
-          pkg-manager: pip
+          pkg-manager: pip3
       - run:
           name: Run tests
           command: pytest
       - setup_remote_docker:
-          version: 20.10.25
+          version: 20.10.11
 
 
 workflows:
