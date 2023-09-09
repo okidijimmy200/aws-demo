@@ -34,6 +34,8 @@ workflows:
               only:
                 # we can use wild card that makes it run on feature branches or master branch /server\/.*/ use reg exp
                 - master
+
+      # image to build and push to ecr
       - aws-ecr/build-and-push-image:
           public-registry: true
           dockerfile: Dockerfile
