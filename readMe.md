@@ -4,7 +4,7 @@ Deploying simple Application to AWS EC Fargate
 >ECR - used to store images
 
 1. in 2
-launch EC2 instance 2 s
+launch EC2 instance 2 iam
  create key pair
  edit network settings(create a security group)
  run EC2 instance from your local terminal
