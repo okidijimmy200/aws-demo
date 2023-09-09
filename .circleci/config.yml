@@ -37,7 +37,7 @@ workflows:
 
       # image to build and push to ecr
       - aws-ecr/build-and-push-image:
-          public-registry: true
+          # public-registry: true
           dockerfile: Dockerfile
           repo: aws
           tag: latest,$CIRCLE_SHA1
