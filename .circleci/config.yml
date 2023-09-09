@@ -39,7 +39,7 @@ workflows:
       - aws-ecr/build-and-push-image:
           # public-registry: true
           dockerfile: Dockerfile
-          repo: aws
+          repo: aws-demo
           tag: latest,$CIRCLE_SHA1
           context:
             - AWS-ECR-DEMO
